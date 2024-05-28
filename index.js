@@ -12,7 +12,7 @@ let quizData = [];
 async function fetchQuizData() {
   try {
     // Fetching science-related questions (multiple categories)
-    const response = await fetch('https://opentdb.com/api.php?amount=10&category=17&category=18&category=19&category=30&category=31&category=32&type=multiple');
+    const response = await fetch('https://opentdb.com/api.php?amount=10&category=17&category=18&type=multiple');
     const data = await response.json();
     quizData = data.results.map((item) => ({
       question: item.question,
